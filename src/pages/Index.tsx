@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Mail, ExternalLink } from "lucide-react";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
 const blogPosts = [
   {
@@ -45,11 +46,18 @@ const Index = () => {
     <div className="min-h-screen max-w-4xl mx-auto px-6 py-12 space-y-24">
       {/* Hero Section */}
       <section className="space-y-6 fade-in">
-        <h1 className="text-4xl font-bold tracking-tight">Zihao Jiang</h1>
-        <div className="space-y-4 text-lg text-muted-foreground slide-up">
-          <p>Currently building AI agents to bring efficiency to lawsuits (<a href="https://legion.law" className="text-primary hover:text-primary/80 inline-flex items-center" target="_blank" rel="noopener noreferrer">legion.law <ExternalLink className="ml-1 h-4 w-4" /></a>)</p>
-          <p>Previously led product at a crypto company that raised $1B. Also PM for Assassin's Creed</p>
-          <p>BA @ Brown, JD/MBA @ U of Toronto</p>
+        <div className="flex items-start gap-8">
+          <Avatar className="w-32 h-32 border-2 border-primary">
+            <AvatarImage src="/lovable-uploads/551865d6-c9b8-4337-b701-97c9d739b3a7.png" alt="Zihao Jiang" />
+          </Avatar>
+          <div className="space-y-6">
+            <h1 className="text-4xl font-bold tracking-tight">Zihao Jiang</h1>
+            <div className="space-y-4 text-lg text-muted-foreground slide-up">
+              <p>Currently building AI agents to bring efficiency to lawsuits (<a href="https://legion.law" className="text-primary hover:text-primary/80 inline-flex items-center" target="_blank" rel="noopener noreferrer">legion.law <ExternalLink className="ml-1 h-4 w-4" /></a>)</p>
+              <p>Previously led product at a crypto company that raised $1B. Also PM for Assassin's Creed</p>
+              <p>BA @ Brown, JD/MBA @ U of Toronto</p>
+            </div>
+          </div>
         </div>
       </section>
 
