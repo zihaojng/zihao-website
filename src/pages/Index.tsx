@@ -5,39 +5,40 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Mail, ExternalLink } from "lucide-react";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
     title: "Starting Legion: Assemble the Team",
-    url: "#",
+    url: "/blog/Starting Legion: Assemble the Team",
   },
   {
     title: "Why Entrepreneurship - Have My Cake and Eat It Too",
-    url: "#",
+    url: "/blog/Why Entrepreneurship - Have My Cake and Eat It Too",
   },
   {
     title: "Wrappers vs vertical AI",
-    url: "#",
+    url: "/blog/Wrappers vs vertical AI",
   },
   {
     title: "On Accountability - Build a Braintrust",
-    url: "#",
+    url: "/blog/On Accountability - Build a Braintrust",
   },
   {
     title: "Love Your Early Customers, Get Their Phone Number",
-    url: "#",
+    url: "/blog/Love Your Early Customers, Get Their Phone Number",
   },
   {
     title: "Do Unfamiliar Things, Be Uncomfortable",
-    url: "#",
+    url: "/blog/Do Unfamiliar Things, Be Uncomfortable",
   },
   {
     title: "Being a Founder vs Being a Pirate (Black Sails)",
-    url: "#",
+    url: "/blog/Being a Founder vs Being a Pirate (Black Sails)",
   },
   {
     title: "Idea Evaluation Framework: Total Amount of Emotion * Number of People Who Can Understand It",
-    url: "#",
+    url: "/blog/Idea Evaluation Framework: Total Amount of Emotion * Number of People Who Can Understand It",
   },
 ];
 
@@ -66,15 +67,15 @@ const Index = () => {
         <h2 className="text-2xl font-semibold tracking-tight">Writing</h2>
         <div className="grid gap-4">
           {blogPosts.map((post, index) => (
-            <a
+            <Link
               key={index}
-              href={post.url}
+              to={post.url}
               className="group transition-colors duration-200"
             >
               <Card className="p-4 hover:bg-muted/50 transition-colors">
                 <h3 className="text-lg blog-link inline-block">{post.title}</h3>
               </Card>
-            </a>
+            </Link>
           ))}
         </div>
       </section>
