@@ -47,7 +47,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="space-y-6 fade-in">
         <div className="flex items-start gap-8">
-          <Avatar className="w-32 h-32 border-2 border-primary">
+          <Avatar className="w-48 h-48">
             <AvatarImage src="/lovable-uploads/551865d6-c9b8-4337-b701-97c9d739b3a7.png" alt="Zihao Jiang" />
           </Avatar>
           <div className="space-y-6">
