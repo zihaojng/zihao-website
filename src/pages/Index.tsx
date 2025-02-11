@@ -162,10 +162,20 @@ const Index = () => {
                 />
               </div>
             </div>
-            <Button className="w-full sm:w-auto hover:shadow-lg transition-all" disabled={isSubmitting}>
-              <Mail className="mr-2 h-4 w-4" />
-              {isSubmitting ? "Sending..." : "Send Message"}
-            </Button>
+            <button 
+              className="push-button" 
+              disabled={isSubmitting}
+              type="submit"
+            >
+              <div className="button-outter">
+                <div className="button-inner">
+                  <span>
+                    <Mail className="h-4 w-4" />
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                  </span>
+                </div>
+              </div>
+            </button>
           </form>
         </Card>
       </section>
