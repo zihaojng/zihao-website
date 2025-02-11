@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -93,7 +92,7 @@ const Index = () => {
     <div className="min-h-screen max-w-4xl mx-auto px-6 py-12 space-y-24">
       {/* Hero Section */}
       <section className="space-y-6 fade-in">
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-8 bg-gradient-to-br from-background via-background to-muted/50 p-8 rounded-lg">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-8 bg-white/50 backdrop-blur-sm p-8 rounded-lg">
           <Avatar className="w-48 h-48 ring-2 ring-primary/10 transition-transform hover:scale-105">
             <AvatarImage src="/lovable-uploads/551865d6-c9b8-4337-b701-97c9d739b3a7.png" alt="Zihao Jiang" />
           </Avatar>
@@ -129,7 +128,7 @@ const Index = () => {
       {/* Contact Section */}
       <section className="space-y-8">
         <h2 className="text-2xl font-semibold tracking-tight bg-gradient-to-br from-foreground to-foreground/80 bg-clip-text text-transparent">Contact</h2>
-        <Card className="p-6 bg-gradient-to-br from-card via-card to-muted/50">
+        <Card className="p-6 bg-white/50 backdrop-blur-sm">
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="space-y-4">
               <div>
@@ -163,7 +162,7 @@ const Index = () => {
               </div>
             </div>
             <button 
-              className="push-button" 
+              className="push-button w-full sm:w-auto" 
               disabled={isSubmitting}
               type="submit"
             >
