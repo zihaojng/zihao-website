@@ -6,6 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Mail, ExternalLink } from "lucide-react";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import emailjs from '@emailjs/browser';
+import { useToast } from "@/components/ui/use-toast";
 
 const blogPosts = [
   {
@@ -43,6 +46,49 @@ const blogPosts = [
 ];
 
 const Index = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        'service_r2gbyoi', // Service ID
+        'template_v2gkc8q', // Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: 'jiangzihaoalex@gmail.com',
+        },
+        'jSvM6AvRpjTm3Ykcf' // Public Key
+      );
+
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+
+      // Reset form
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      toast({
+        title: "Failed to send message",
+        description: "Please try again later or contact me directly via email.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen max-w-4xl mx-auto px-6 py-12 space-y-24">
       {/* Hero Section */}
@@ -84,21 +130,41 @@ const Index = () => {
       <section className="space-y-8">
         <h2 className="text-2xl font-semibold tracking-tight">Contact</h2>
         <Card className="p-6">
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="space-y-4">
               <div>
-                <Input placeholder="Name" className="bg-background" />
+                <Input 
+                  placeholder="Name" 
+                  className="bg-background" 
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  required
+                />
               </div>
               <div>
-                <Input type="email" placeholder="Email" className="bg-background" />
+                <Input 
+                  type="email" 
+                  placeholder="Email" 
+                  className="bg-background" 
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  required
+                />
               </div>
               <div>
-                <Textarea placeholder="Message" className="bg-background" rows={4} />
+                <Textarea 
+                  placeholder="Message" 
+                  className="bg-background" 
+                  rows={4} 
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  required
+                />
               </div>
             </div>
-            <Button className="w-full sm:w-auto">
+            <Button className="w-full sm:w-auto" disabled={isSubmitting}>
               <Mail className="mr-2 h-4 w-4" />
-              Send Message
+              {isSubmitting ? "Sending..." : "Send Message"}
             </Button>
           </form>
         </Card>
