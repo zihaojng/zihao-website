@@ -60,15 +60,15 @@ const Index = () => {
 
     try {
       await emailjs.send(
-        'service_r2gbyoi', // Service ID
-        'template_v2gkc8q', // Template ID
+        'service_nxtikpi', // Updated Service ID
+        'template_pf1h3qi', // Updated Template ID
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
           to_email: 'jiangzihaoalex@gmail.com',
         },
-        'jSvM6AvRpjTm3Ykcf' // Public Key
+        'f8_-PZk7Z52Zf0TyV' // Updated Public Key
       );
 
       toast({
