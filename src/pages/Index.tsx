@@ -161,20 +161,21 @@ const Index = () => {
                 />
               </div>
             </div>
-            <button 
-              className="push-button w-full sm:w-auto" 
-              disabled={isSubmitting}
-              type="submit"
-            >
-              <div className="button-outter">
-                <div className="button-inner">
-                  <span>
-                    <Mail className="h-4 w-4" />
-                    {isSubmitting ? "Sending..." : "Send Message"}
-                  </span>
+            <div className="flex justify-center">
+              <button 
+                className="push-button w-40" 
+                disabled={isSubmitting}
+                type="submit"
+              >
+                <div className="button-outter">
+                  <div className="button-inner">
+                    <span>
+                      {isSubmitting ? "Sending..." : "Send Message"}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </button>
+              </button>
+            </div>
           </form>
         </Card>
       </section>

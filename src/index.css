@@ -117,7 +117,7 @@
   position: relative;
   z-index: 1;
   border-radius: inherit;
-  padding: 0.6em 1.2em;
+  padding: 0.8em 2em;
   background-image: linear-gradient(
     135deg,
     rgba(230, 230, 230, 1),
@@ -138,27 +138,13 @@
     -0.075em -0.25em 0.25em 0.1em inset rgba(5, 5, 5, 0.25);
 }
 
-.push-button:hover .button-inner {
-  clip-path: inset(
-    clamp(1px, 0.0625em, 2px) clamp(1px, 0.0625em, 2px)
-      clamp(1px, 0.0625em, 2px) clamp(1px, 0.0625em, 2px) round 999vw
-  );
-  box-shadow:
-    0.1em 0.15em 0.05em 0 inset rgba(5, 5, 5, 0.75),
-    -0.025em -0.03em 0.05em 0.025em inset rgba(5, 5, 5, 0.5),
-    0.25em 0.25em 0.2em 0 inset rgba(5, 5, 5, 0.5),
-    0 0 0.05em 0.5em inset rgba(255, 255, 255, 0.15),
-    0 0 0 0 inset rgba(255, 255, 255, 1),
-    0.12em 0.12em 0.12em inset rgba(255, 255, 255, 0.25),
-    -0.075em -0.12em 0.2em 0.1em inset rgba(5, 5, 5, 0.25);
-}
-
 .button-inner span {
   position: relative;
   z-index: 4;
   font-family: inherit;
   letter-spacing: -0.05em;
   font-weight: 500;
+  font-size: 0.9rem;
   color: rgba(0, 0, 0, 0);
   background-image: linear-gradient(
     135deg,
@@ -171,7 +157,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  text-align: center;
   width: 100%;
   will-change: transform;
   text-shadow: rgba(0, 0, 0, 0.1) 0 0 0.1em;
