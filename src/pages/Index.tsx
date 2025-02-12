@@ -99,7 +99,14 @@ const Index = () => {
           <div className="space-y-6 text-center md:text-left">
             <h1 className="text-4xl font-bold tracking-tight bg-gradient-to-br from-foreground to-foreground/80 bg-clip-text text-transparent">Zihao Jiang</h1>
             <div className="space-y-4 text-lg text-muted-foreground slide-up">
-              <p className="flex items-center gap-1 flex-wrap">Currently building AI agents to bring efficiency to lawsuits (<a href="https://legion.law" className="text-primary hover:text-primary/80 inline-flex items-center transition-colors" target="_blank" rel="noopener noreferrer">legion.law <ExternalLink className="ml-1 h-4 w-4" /></a>)</p>
+              <div className="space-y-1">
+                <p>Currently building AI agents to bring efficiency to lawsuits</p>
+                <p className="ml-4">
+                  <a href="https://legion.law" className="text-primary hover:text-primary/80 inline-flex items-center transition-colors" target="_blank" rel="noopener noreferrer">
+                    legion.law <ExternalLink className="ml-1 h-4 w-4" />
+                  </a>
+                </p>
+              </div>
               <p>Previously led product at a crypto company that raised $1B. Also PM for Assassin's Creed</p>
               <p>BA @ Brown, JD/MBA @ U of Toronto</p>
             </div>
