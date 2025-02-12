@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,7 +29,7 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    background-image: linear-gradient(135deg, rgba(230, 230, 230, 1), rgba(180, 180, 180, 1));
+    background-image: linear-gradient(135deg, rgb(245, 245, 245), rgb(235, 235, 235));
   }
 }
 

@@ -91,21 +91,24 @@ const Index = () => {
   return (
     <div className="min-h-screen max-w-4xl mx-auto px-6 py-12 space-y-24">
       {/* Hero Section */}
-      <section className="space-y-6 fade-in">
+      <section className="fade-in">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8 bg-white/50 backdrop-blur-sm p-8 rounded-lg">
-          <Avatar className="w-48 h-48 ring-2 ring-primary/10 transition-transform hover:scale-105">
+          <Avatar className="w-48 h-48 rounded-full overflow-hidden">
             <AvatarImage src="/lovable-uploads/551865d6-c9b8-4337-b701-97c9d739b3a7.png" alt="Zihao Jiang" />
           </Avatar>
-          <div className="space-y-6 text-center md:text-left">
-            <h1 className="text-4xl font-bold tracking-tight bg-gradient-to-br from-foreground to-foreground/80 bg-clip-text text-transparent">Zihao Jiang</h1>
-            <div className="space-y-4 text-lg text-muted-foreground slide-up">
-              <div className="space-y-1">
+          <div className="flex-1 space-y-6 text-center md:text-left">
+            <h1 className="text-4xl font-bold text-slate-900">Zihao Jiang</h1>
+            <div className="space-y-4 text-lg text-slate-600 slide-up">
+              <div className="space-y-2">
                 <p>Currently building AI agents to bring efficiency to lawsuits</p>
-                <p className="ml-4">
-                  <a href="https://legion.law" className="text-primary hover:text-primary/80 inline-flex items-center transition-colors" target="_blank" rel="noopener noreferrer">
-                    legion.law <ExternalLink className="ml-1 h-4 w-4" />
-                  </a>
-                </p>
+                <a 
+                  href="https://legion.law" 
+                  className="text-blue-600 hover:text-blue-700 inline-flex items-center transition-colors"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  legion.law <ExternalLink className="ml-1 h-4 w-4" />
+                </a>
               </div>
               <p>Previously led product at a crypto company that raised $1B. Also PM for Assassin's Creed</p>
               <p>BA @ Brown, JD/MBA @ U of Toronto</p>
