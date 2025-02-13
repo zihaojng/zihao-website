@@ -93,9 +93,13 @@ const Index = () => {
       {/* Hero Section */}
       <section className="fade-in">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8 bg-white/50 backdrop-blur-sm p-8 rounded-lg">
-          <Avatar className="w-48 h-48 rounded-full overflow-hidden">
-            <AvatarImage src="/lovable-uploads/551865d6-c9b8-4337-b701-97c9d739b3a7.png" alt="Zihao Jiang" />
-          </Avatar>
+          <div className="w-64 h-80 shrink-0 overflow-hidden rounded-lg transition-all duration-300 hover:shadow-xl group">
+            <img 
+              src="/lovable-uploads/8c9529ac-8499-44e6-9bb0-75c9f1130a9e.png" 
+              alt="Zihao Jiang" 
+              className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+            />
+          </div>
           <div className="flex-1 space-y-6 text-center md:text-left">
             <h1 className="text-4xl font-bold text-slate-900">Zihao Jiang</h1>
             <div className="space-y-4 text-lg text-slate-600 slide-up">
