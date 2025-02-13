@@ -110,7 +110,7 @@ const Index = () => {
               </div>
               <div className="flex gap-4 pt-4">
                 <a 
-                  href="https://twitter.com/alexjiangzh" 
+                  href="https://x.com/zeeitthru" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="social-button"
@@ -118,7 +118,7 @@ const Index = () => {
                   <Twitter size={20} /> Say hi on Twitter
                 </a>
                 <a 
-                  href="https://linkedin.com/in/zihaojiangalex" 
+                  href="https://www.linkedin.com/in/zihaoj/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="social-button"
