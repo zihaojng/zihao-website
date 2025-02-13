@@ -1,13 +1,11 @@
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { Mail, ExternalLink } from "lucide-react";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import { Link } from "react-router-dom";
+import { Mail, ExternalLink, Twitter, Linkedin } from "lucide-react";
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
 import { useToast } from "@/components/ui/use-toast";
+import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
@@ -91,32 +89,51 @@ const Index = () => {
   return (
     <div className="min-h-screen max-w-4xl mx-auto px-6 py-12 space-y-24">
       {/* Hero Section */}
-      <section className="fade-in">
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-8 bg-white/50 backdrop-blur-sm p-8 rounded-lg">
-          <div className="w-64 h-80 shrink-0 overflow-hidden rounded-lg transition-all duration-300 hover:shadow-xl group">
+      <section className="fade-in bg-white rounded-xl shadow-sm p-12">
+        <div className="flex flex-col-reverse md:flex-row items-start gap-12">
+          <div className="flex-1 space-y-8">
+            <div className="space-y-6">
+              <span className="text-orange-500 font-medium">About</span>
+              <h1 className="text-5xl font-bold text-slate-900">Hello, I'm Zihao</h1>
+              <div className="space-y-4 text-lg text-slate-600">
+                <p>Currently building AI agents to bring efficiency to lawsuits at <a 
+                    href="https://legion.law" 
+                    className="text-blue-600 hover:text-blue-700 underline"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    legion.law
+                  </a>
+                </p>
+                <p>Previously led product at a crypto company that raised $1B. Also PM for Assassin's Creed</p>
+                <p>BA @ Brown, JD/MBA @ U of Toronto</p>
+              </div>
+              <div className="flex gap-4 pt-4">
+                <a 
+                  href="https://twitter.com/alexjiangzh" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="social-button"
+                >
+                  <Twitter size={20} /> Say hi on Twitter
+                </a>
+                <a 
+                  href="https://linkedin.com/in/zihaojiangalex" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="social-button"
+                >
+                  <Linkedin size={20} /> Connect on LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="w-64 h-80 shrink-0 overflow-hidden rounded-lg">
             <img 
               src="/lovable-uploads/8c9529ac-8499-44e6-9bb0-75c9f1130a9e.png" 
               alt="Zihao Jiang" 
-              className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+              className="w-full h-full object-cover object-center"
             />
-          </div>
-          <div className="flex-1 space-y-6 text-center md:text-left">
-            <h1 className="text-4xl font-bold text-slate-900">Zihao Jiang</h1>
-            <div className="space-y-4 text-lg text-slate-600 slide-up">
-              <div className="space-y-2">
-                <p>Currently building AI agents to bring efficiency to lawsuits</p>
-                <a 
-                  href="https://legion.law" 
-                  className="text-blue-600 hover:text-blue-700 inline-flex items-center transition-colors"
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  legion.law <ExternalLink className="ml-1 h-4 w-4" />
-                </a>
-              </div>
-              <p>Previously led product at a crypto company that raised $1B. Also PM for Assassin's Creed</p>
-              <p>BA @ Brown, JD/MBA @ U of Toronto</p>
-            </div>
           </div>
         </div>
       </section>

@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,8 +27,8 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
-    background-image: linear-gradient(135deg, rgb(245, 245, 245), rgb(235, 235, 235));
+    @apply text-foreground antialiased min-h-screen;
+    background-color: rgb(255, 251, 247);
   }
 }
 
@@ -175,4 +174,8 @@
 .push-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.social-button {
+  @apply bg-black text-white px-4 py-2 rounded-md hover:bg-black/90 transition-colors duration-200 inline-flex items-center gap-2;
 }
