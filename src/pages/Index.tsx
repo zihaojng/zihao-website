@@ -1,13 +1,11 @@
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { Mail, ExternalLink } from "lucide-react";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import { Link } from "react-router-dom";
+import { Mail, ExternalLink, Twitter, Linkedin } from "lucide-react";
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
 import { useToast } from "@/components/ui/use-toast";
+import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
@@ -91,18 +89,51 @@ const Index = () => {
   return (
     <div className="min-h-screen max-w-4xl mx-auto px-6 py-12 space-y-24">
       {/* Hero Section */}
-      <section className="space-y-6 fade-in">
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-8 bg-white/50 backdrop-blur-sm p-8 rounded-lg">
-          <Avatar className="w-48 h-48 ring-2 ring-primary/10 transition-transform hover:scale-105">
-            <AvatarImage src="/lovable-uploads/551865d6-c9b8-4337-b701-97c9d739b3a7.png" alt="Zihao Jiang" />
-          </Avatar>
-          <div className="space-y-6 text-center md:text-left">
-            <h1 className="text-4xl font-bold tracking-tight bg-gradient-to-br from-foreground to-foreground/80 bg-clip-text text-transparent">Zihao Jiang</h1>
-            <div className="space-y-4 text-lg text-muted-foreground slide-up">
-              <p>Currently building AI agents to bring efficiency to lawsuits (<a href="https://legion.law" className="text-primary hover:text-primary/80 inline-flex items-center transition-colors" target="_blank" rel="noopener noreferrer">legion.law <ExternalLink className="ml-1 h-4 w-4" /></a>)</p>
-              <p>Previously led product at a crypto company that raised $1B. Also PM for Assassin's Creed</p>
-              <p>BA @ Brown, JD/MBA @ U of Toronto</p>
+      <section className="fade-in bg-white rounded-xl shadow-sm p-12">
+        <div className="flex flex-col-reverse md:flex-row items-start gap-12">
+          <div className="flex-1 space-y-8">
+            <div className="space-y-6">
+              <span className="text-orange-500 font-medium">About</span>
+              <h1 className="text-5xl font-bold text-slate-900">Hello, I'm Zihao</h1>
+              <div className="space-y-4 text-lg text-slate-600">
+                <p>Currently building AI agents to bring efficiency to lawsuits at <a 
+                    href="https://legion.law" 
+                    className="text-blue-600 hover:text-blue-700 underline"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    legion.law
+                  </a>
+                </p>
+                <p>Previously led product at a crypto company that raised $1B. Also PM for Assassin's Creed <img src="/lovable-uploads/5e5b86f8-e89c-4575-b42b-35b0f215ec0e.png" alt="Assassin's Creed Icon" className="inline-block h-6 w-6 -mt-1" /></p>
+                <p>BA @ Brown, JD/MBA @ U of Toronto</p>
+              </div>
+              <div className="flex gap-4 pt-4">
+                <a 
+                  href="https://x.com/zeeitthru" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="social-button"
+                >
+                  <Twitter size={20} /> Say hi on Twitter
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/zihaoj/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="social-button"
+                >
+                  <Linkedin size={20} /> Connect on LinkedIn
+                </a>
+              </div>
             </div>
+          </div>
+          <div className="w-64 h-80 shrink-0 overflow-hidden rounded-lg">
+            <img 
+              src="/lovable-uploads/8c9529ac-8499-44e6-9bb0-75c9f1130a9e.png" 
+              alt="Zihao Jiang" 
+              className="w-full h-full object-cover object-center"
+            />
           </div>
         </div>
       </section>
@@ -161,20 +192,21 @@ const Index = () => {
                 />
               </div>
             </div>
-            <button 
-              className="push-button w-full sm:w-auto" 
-              disabled={isSubmitting}
-              type="submit"
-            >
-              <div className="button-outter">
-                <div className="button-inner">
-                  <span>
-                    <Mail className="h-4 w-4" />
-                    {isSubmitting ? "Sending..." : "Send Message"}
-                  </span>
+            <div className="flex justify-center">
+              <button 
+                className="push-button w-40" 
+                disabled={isSubmitting}
+                type="submit"
+              >
+                <div className="button-outter">
+                  <div className="button-inner">
+                    <span>
+                      {isSubmitting ? "Sending..." : "Send Message"}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </button>
+              </button>
+            </div>
           </form>
         </Card>
       </section>
