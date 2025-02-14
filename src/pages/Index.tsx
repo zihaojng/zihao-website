@@ -92,7 +92,7 @@ const Index = () => {
         <div className="flex flex-col-reverse md:flex-row items-start gap-12">
           <div className="flex-1 space-y-8">
             <div className="space-y-6">
-              <span className="text-orange-500 font-medium">About</span>
+              <span className="font-medium" style={{ color: '#dc7d06' }}>About</span>
               <h1 className="text-5xl font-bold text-slate-900">Hello, I'm Zihao</h1>
               <div className="space-y-4 text-lg text-slate-600">
                 <p>Currently building AI agents to bring efficiency to lawsuits at <a 
