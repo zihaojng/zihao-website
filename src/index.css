@@ -28,7 +28,7 @@
 
   body {
     @apply text-foreground antialiased min-h-screen;
-    background-color: rgb(255, 251, 247);
+    background-color: #f7f4ed;
   }
 }
 

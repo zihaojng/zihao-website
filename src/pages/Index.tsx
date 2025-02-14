@@ -88,8 +88,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen max-w-4xl mx-auto px-6 py-12 space-y-24">
-      {/* Hero Section */}
-      <section className="fade-in bg-white rounded-xl shadow-sm p-12">
+      <section className="fade-in bg-white rounded-xl shadow-sm p-12 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
         <div className="flex flex-col-reverse md:flex-row items-start gap-12">
           <div className="flex-1 space-y-8">
             <div className="space-y-6">
@@ -128,7 +127,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className="w-64 h-80 shrink-0 overflow-hidden rounded-lg">
+          <div className="w-64 h-80 shrink-0 overflow-hidden rounded-lg transition-transform duration-300 hover:scale-105">
             <img 
               src="/lovable-uploads/8c9529ac-8499-44e6-9bb0-75c9f1130a9e.png" 
               alt="Zihao Jiang" 
@@ -138,7 +137,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Blog Section */}
       <section className="space-y-8">
         <h2 className="text-2xl font-semibold tracking-tight bg-gradient-to-br from-foreground to-foreground/80 bg-clip-text text-transparent">Writing</h2>
         <div className="grid gap-4">
@@ -156,7 +154,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section className="space-y-8">
         <h2 className="text-2xl font-semibold tracking-tight bg-gradient-to-br from-foreground to-foreground/80 bg-clip-text text-transparent">Contact</h2>
         <Card className="p-6 bg-white/50 backdrop-blur-sm">
