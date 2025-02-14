@@ -127,7 +127,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className="w-64 h-80 shrink-0 overflow-hidden rounded-lg transition-transform duration-300 hover:scale-105">
+          <div className="w-64 h-80 shrink-0 overflow-hidden rounded-lg">
             <img 
               src="/lovable-uploads/8c9529ac-8499-44e6-9bb0-75c9f1130a9e.png" 
               alt="Zihao Jiang" 
