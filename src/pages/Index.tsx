@@ -88,7 +88,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen max-w-4xl mx-auto px-6 py-12 space-y-24">
-      <section className="fade-in bg-white rounded-xl shadow-sm p-12 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+      <section className="fade-in bg-white rounded-xl shadow-lg p-12">
         <div className="flex flex-col-reverse md:flex-row items-start gap-12">
           <div className="flex-1 space-y-8">
             <div className="space-y-6">
