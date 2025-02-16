@@ -87,12 +87,12 @@ const Index = () => {
             }}>About</span>
               <h1 className="text-5xl font-bold text-slate-900">Hi, I'm Zihao</h1>
               <div className="space-y-4 text-lg text-slate-600">
-                <p>Currently building AI agents to bring efficiency to lawsuits at <a href="https://legion.law" className="text-blue-600 hover:text-blue-700 underline" target="_blank" rel="noopener noreferrer">
+                <p className="text-gray-950">Currently building AI agents to bring efficiency to lawsuits at <a href="https://legion.law" className="text-blue-600 hover:text-blue-700 underline" target="_blank" rel="noopener noreferrer">
                     legion.law
                   </a>
                 </p>
-                <p className="text-base">Previously led product at a crypto company that raised $1B. Also PM for Assassin's Creed <img src="/lovable-uploads/5e5b86f8-e89c-4575-b42b-35b0f215ec0e.png" alt="Assassin's Creed Icon" className="inline-block h-6 w-6 -mt-1" /></p>
-                <p>BA @ Brown, JD/MBA @ U of Toronto</p>
+                <p className="text-base text-gray-950">Previously led product at a crypto company that raised $1B. Also PM for Assassin's Creed <img src="/lovable-uploads/5e5b86f8-e89c-4575-b42b-35b0f215ec0e.png" alt="Assassin's Creed Icon" className="inline-block h-6 w-6 -mt-1" /></p>
+                <p className="text-gray-950">BA @ Brown, JD/MBA @ U of Toronto</p>
               </div>
               <div className="flex gap-4 pt-4">
                 <a href="https://x.com/zeeitthru" target="_blank" rel="noopener noreferrer" className="social-button">
