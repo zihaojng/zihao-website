@@ -6,62 +6,38 @@ import { useState } from "react";
 import emailjs from '@emailjs/browser';
 import { useToast } from "@/components/ui/use-toast";
 import { Link } from "react-router-dom";
+
 const blogPosts = [{
-  title: "Starting Legion: Assemble the Team",
-  url: "/blog/Starting Legion: Assemble the Team"
-}, {
-  title: "Why Entrepreneurship - Have My Cake and Eat It Too",
-  url: "/blog/Why Entrepreneurship - Have My Cake and Eat It Too"
-}, {
-  title: "Wrappers vs vertical AI",
-  url: "/blog/Wrappers vs vertical AI"
-}, {
-  title: "On Accountability - Build a Braintrust",
-  url: "/blog/On Accountability - Build a Braintrust"
-}, {
-  title: "Love Your Early Customers, Get Their Phone Number",
-  url: "/blog/Love Your Early Customers, Get Their Phone Number"
-}, {
-  title: "Do Unfamiliar Things, Be Uncomfortable",
-  url: "/blog/Do Unfamiliar Things, Be Uncomfortable"
-}, {
-  title: "Being a Founder vs Being a Pirate (Black Sails)",
-  url: "/blog/Being a Founder vs Being a Pirate (Black Sails)"
-}, {
   title: "Idea Evaluation Framework: Total Amount of Emotion * Number of People Who Can Understand It",
   url: "/blog/Idea Evaluation Framework: Total Amount of Emotion * Number of People Who Can Understand It"
 }];
+
 const Index = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     try {
       await emailjs.send('service_nxtikpi',
-      // Updated Service ID
       'template_pf1h3qi',
-      // Updated Template ID
       {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
         to_email: 'jiangzihaoalex@gmail.com'
-      }, 'f8_-PZk7Z52Zf0TyV' // Updated Public Key
-      );
+      }, 'f8_-PZk7Z52Zf0TyV');
       toast({
         title: "Message sent successfully!",
         description: "Thank you for reaching out. I'll get back to you soon."
       });
 
-      // Reset form
       setFormData({
         name: '',
         email: '',
@@ -77,6 +53,7 @@ const Index = () => {
       setIsSubmitting(false);
     }
   };
+
   return <div className="min-h-screen max-w-4xl mx-auto px-6 py-12 space-y-24">
       <section className="fade-in bg-white rounded-xl shadow-lg p-12">
         <div className="flex flex-col-reverse md:flex-row items-start gap-12">
@@ -161,4 +138,5 @@ const Index = () => {
       </section>
     </div>;
 };
+
 export default Index;
