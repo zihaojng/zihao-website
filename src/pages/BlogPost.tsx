@@ -2,15 +2,8 @@
 import { useParams } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
-const slugify = (text: string) => {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '');
-};
-
 const blogContent = {
-  "the-emotional-arbitrage-a-framework-for-startup-ideation": {
+  "The Emotional Arbitrage: A Framework for Startup Ideation": {
     title: "The Emotional Arbitrage: A Framework for Startup Ideation",
     sections: [
       {
@@ -42,8 +35,8 @@ const blogContent = {
 };
 
 const BlogPost = () => {
-  const { slug } = useParams();
-  const post = blogContent[slug as keyof typeof blogContent];
+  const { title } = useParams();
+  const post = blogContent[title as keyof typeof blogContent];
 
   if (!post) {
     return <div className="min-h-screen flex items-center justify-center">
