@@ -1,3 +1,4 @@
+
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -8,8 +9,8 @@ import { useToast } from "@/components/ui/use-toast";
 import { Link } from "react-router-dom";
 
 const blogPosts = [{
-  title: "Idea Evaluation Framework: Total Amount of Emotion * Number of People Who Can Understand It",
-  url: "/blog/Idea Evaluation Framework: Total Amount of Emotion * Number of People Who Can Understand It"
+  title: "The Emotional Arbitrage: A Framework for Startup Ideation",
+  url: "/blog/The Emotional Arbitrage: A Framework for Startup Ideation"
 }];
 
 const Index = () => {
