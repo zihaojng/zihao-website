@@ -7,55 +7,24 @@ const blogContent = {
     title: "The Emotional Arbitrage: A Framework for Startup Ideation",
     sections: [
       {
-        heading: "Introduction",
-        content: "The conventional wisdom in startup ideation focuses on finding 'pain points'—but this framing, while useful, obscures a more fundamental dynamic: successful startups don't just solve problems, they arbitrage emotions at scale."
-      },
-      {
         heading: "The Emotional Arbitrage Framework",
-        content: "The equation is simple: \n      Feeling × Audience = Potential\n      \n      What makes this framework powerful is its predictive capability. When you observe intense emotional reactions (frustration, envy, anger) around a problem that affects a large addressable market, you're likely looking at fertile ground for disruption."
+        content: "**Feeling × Audience = Potential**\n\nWhat makes this framework powerful is its predictive capability. When you observe intense emotional reactions (frustration, envy, anger) around a problem that affects a large addressable market, you're likely looking at fertile ground for disruption."
       },
       {
         heading: "The Framework in Action",
-        examples: [
-          {
-            title: "Uber",
-            conditions: [
-              "Intense emotional negativity (unreliable service, perceived price gouging)",
-              "Universal experience (everyone who needed urban transportation)",
-              "Clear status quo villain (the taxi 'cartel')"
-            ],
-            key_takeaway: "Uber's genius wasn't just technological—it was recognizing and weaponizing existing emotional intensity."
-          },
-          {
-            title: "Airbnb",
-            conditions: [
-              "Founders experienced high hotel prices and limited availability",
-              "Tapping into widespread frustration with traditional accommodation options"
-            ],
-            key_takeaway: "Emotional intensity around hotel prices and limited choices, combined with the massive scale of the travel market, created perfect conditions for their peer-to-peer solution."
-          },
-          {
-            title: "Political Stock Trading Apps",
-            conditions: [
-              "Moral outrage ('Why do politicians get to trade on insider knowledge?')",
-              "Financial FOMO ('How can I get those returns?')"
-            ],
-            key_takeaway: "While the efficient market hypothesis suggests this opportunity may be temporary, the emotional intensity × scale equation predicts strong initial traction."
-          }
-        ]
+        content: "Consider Uber's emergence in 2009. The taxi industry had created perfect conditions for disruption:\n• Intense emotional negativity (unreliable service, perceived price gouging)\n• Universal experience (everyone who needed urban transportation)\n• Clear status quo villain (the taxi "cartel")\n\nUber's genius wasn't just technological - it was recognizing and weaponizing existing emotional intensity. Their early messaging ("Everyone's private driver") wasn't about anger; it was about empowerment. But it worked because the anger was already there, waiting to be channeled.\n\nAirbnb followed a similar pattern. The founders' origin story - renting air mattresses during a conference when hotels were price-gouging - resonated because it tapped into widespread frustration with traditional accommodation options. The emotional intensity around hotel prices and limited choices, combined with the massive scale of the travel market, created perfect conditions for their peer-to-peer solution."
+      },
+      {
+        heading: "Modern Applications",
+        content: "A fascinating recent example is the emergence of political stock trading apps. These platforms operate at the intersection of two powerful emotions:\n1. Moral outrage ("Why do politicians get to trade on insider knowledge?")\n2. Financial FOMO ("How can I get those returns?")\n\nThe addressable market includes both retail investors and anyone frustrated with political corruption - a potentially massive scale. While the efficient market hypothesis suggests this opportunity may be temporary, the emotional intensity × scale equation predicts strong initial traction."
       },
       {
         heading: "The Strategy",
-        steps: [
-          "Look for strong emotional signals (Reddit rants, Twitter threads, viral complaints)",
-          "Assess the potential scale (addressable market size, purchase power)",
-          "Design solutions that don't just solve the problem, but validate and channel the underlying emotion"
-        ],
-        conclusion: "The most successful startups don't just build better mousetraps—they tap into and scale existing emotional currents."
+        content: "For founders, this suggests a clear pathway for ideation:\n1. Look for strong emotional signals (Reddit rants, Twitter threads, viral complaints)\n2. Assess the potential scale (addressable market size, purchase power)\n3. Design solutions that don't just solve the problem, but validate and channel the underlying emotion\n\nThe most successful startups don't just build better mousetraps - they tap into and scale existing emotional currents. Understanding this dynamic is crucial for founders seeking to create truly transformative companies."
       },
       {
         heading: "How I Applied This to Legion",
-        content: "When I was ideating around AI agents for litigation, I found my signal in the raw language lawyers used to describe discovery disputes: 'hate,' 'mind-numbing,' 'infuriating,' 'bane of my practice.' These weren't just complaints; they were emotional flares signaling deep professional pain. With 500,000 litigation lawyers in the US alone, the scale was significant. Not the biggest market, perhaps, but one with high purchasing power and intense, consistent pain."
+        content: "When I was ideating around AI agents for litigation, I found my signal in the raw language lawyers used to describe discovery disputes: "hate," "mind-numbing," "infuriating," "bane of my practice."\n\n\n\n\n\nThese weren't just complaints; they were emotional flares signaling deep professional pain. Each upvote represented another lawyer nodding in frustrated agreement. With 500,000 litigation lawyers in the US alone, the scale was significant. Not the biggest market, perhaps, but one with high purchasing power and intense, consistent pain."
       }
     ]
   }
@@ -82,39 +51,12 @@ const BlogPost = () => {
         {post.sections.map((section, index) => (
           <div key={index} className="mb-12">
             <h2 className="text-2xl font-semibold mb-4">{section.heading}</h2>
-            
-            {'content' in section && (
-              <div className="whitespace-pre-wrap">{section.content}</div>
-            )}
-            
-            {'examples' in section && (
-              <div className="space-y-8">
-                {section.examples.map((example, idx) => (
-                  <div key={idx} className="bg-gray-50 p-6 rounded-lg">
-                    <h3 className="text-xl font-semibold mb-4">{example.title}</h3>
-                    <ul className="list-disc pl-5 space-y-2">
-                      {example.conditions.map((condition, condIdx) => (
-                        <li key={condIdx}>{condition}</li>
-                      ))}
-                    </ul>
-                    <p className="mt-4 font-medium">{example.key_takeaway}</p>
-                  </div>
-                ))}
-              </div>
-            )}
-            
-            {'steps' in section && (
-              <>
-                <ul className="list-decimal pl-5 space-y-2">
-                  {section.steps.map((step, stepIdx) => (
-                    <li key={stepIdx}>{step}</li>
-                  ))}
-                </ul>
-                {section.conclusion && (
-                  <p className="mt-4 font-medium">{section.conclusion}</p>
-                )}
-              </>
-            )}
+            <div 
+              className="whitespace-pre-wrap" 
+              dangerouslySetInnerHTML={{
+                __html: section.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+              }}
+            />
           </div>
         ))}
       </article>
