@@ -7,8 +7,12 @@ const blogContent = {
     title: "The Emotional Arbitrage: A Framework for Startup Ideation",
     sections: [
       {
+        heading: "",
+        content: "The conventional wisdom in startup ideation focuses on finding \"pain points\" - but this framing, while useful, obscures a more fundamental dynamic: successful startups don't just solve problems, they arbitrage emotions at scale."
+      },
+      {
         heading: "The Emotional Arbitrage Framework",
-        content: "**Feeling × Audience = Potential**\n\nWhat makes this framework powerful is its predictive capability. When you observe intense emotional reactions (frustration, envy, anger) around a problem that affects a large addressable market, you're likely looking at fertile ground for disruption."
+        content: "The equation is simple:\n\n**Feeling × Audience = Potential**\n\nWhat makes this framework powerful is its predictive capability. When you observe intense emotional reactions (frustration, envy, anger) around a problem that affects a large addressable market, you're likely looking at fertile ground for disruption."
       },
       {
         heading: "The Framework in Action",
