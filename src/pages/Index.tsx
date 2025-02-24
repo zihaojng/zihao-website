@@ -1,3 +1,4 @@
+
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -73,10 +74,12 @@ const Index = () => {
               </div>
               <div className="flex gap-4 pt-4">
                 <a href="https://x.com/zeeitthru" target="_blank" rel="noopener noreferrer" className="social-button">
-                  <Twitter size={20} /> Say hi on Twitter
+                  <Twitter size={20} />
+                  <span className="hidden md:inline">Say hi on Twitter</span>
                 </a>
                 <a href="https://www.linkedin.com/in/zihaoj/" target="_blank" rel="noopener noreferrer" className="social-button">
-                  <Linkedin size={20} /> Connect on LinkedIn
+                  <Linkedin size={20} />
+                  <span className="hidden md:inline">Connect on LinkedIn</span>
                 </a>
               </div>
             </div>
