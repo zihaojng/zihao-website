@@ -44,6 +44,13 @@ const BlogPost = () => {
       <div className="text-center">
         <h1 className="text-4xl font-bold text-gray-900">Post not found</h1>
         <p className="mt-4 text-gray-600">The blog post you're looking for doesn't exist.</p>
+        <Link 
+          to="/" 
+          className="inline-flex items-center text-gray-600 hover:text-gray-900 mt-4 transition-colors"
+        >
+          <ChevronLeft className="h-4 w-4 mr-1" />
+          Back to Home
+        </Link>
       </div>
     </div>;
   }
@@ -62,7 +69,7 @@ const BlogPost = () => {
         
         {post.sections.map((section, index) => (
           <div key={index} className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4">{section.heading}</h2>
+            {section.heading && <h2 className="text-2xl font-semibold mb-4">{section.heading}</h2>}
             <div 
               className="whitespace-pre-wrap" 
               dangerouslySetInnerHTML={{
