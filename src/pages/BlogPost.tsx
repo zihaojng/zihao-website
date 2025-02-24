@@ -1,9 +1,10 @@
 
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { ChevronLeft } from "lucide-react";
 
 const blogContent = {
-  "The Emotional Arbitrage: A Framework for Startup Ideation": {
+  "the-emotional-arbitrage-a-framework-for-startup-ideation": {
     title: "The Emotional Arbitrage: A Framework for Startup Ideation",
     sections: [
       {
@@ -35,8 +36,8 @@ const blogContent = {
 };
 
 const BlogPost = () => {
-  const { title } = useParams();
-  const post = blogContent[title as keyof typeof blogContent];
+  const { slug } = useParams();
+  const post = blogContent[slug as keyof typeof blogContent];
 
   if (!post) {
     return <div className="min-h-screen flex items-center justify-center">
@@ -49,6 +50,13 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen max-w-3xl mx-auto px-6 py-12">
+      <Link 
+        to="/" 
+        className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 transition-colors"
+      >
+        <ChevronLeft className="h-4 w-4 mr-1" />
+        Home
+      </Link>
       <article className="prose prose-slate lg:prose-lg mx-auto">
         <h1 className="text-4xl font-bold mb-8">{post.title}</h1>
         

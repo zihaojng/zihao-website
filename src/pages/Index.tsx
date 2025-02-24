@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -10,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [{
   title: "The Emotional Arbitrage: A Framework for Startup Ideation",
-  url: "/blog/The Emotional Arbitrage: A Framework for Startup Ideation"
+  url: "/blog/the-emotional-arbitrage-a-framework-for-startup-ideation"
 }];
 
 const Index = () => {
