@@ -37,7 +37,7 @@ const blogContent = {
 
 const BlogPost = () => {
   const { slug } = useParams();
-  console.log("Current slug:", slug); // Adding this to debug
+  console.log("Current slug:", slug);
 
   if (!slug || !blogContent[slug]) {
     return <div className="min-h-screen flex items-center justify-center">
@@ -66,7 +66,7 @@ const BlogPost = () => {
         <ChevronLeft className="h-4 w-4 mr-1" />
         Home
       </Link>
-      <article className="prose prose-slate lg:prose-lg mx-auto">
+      <article className="prose prose-slate lg:prose-lg mx-auto text-left">
         <h1 className="text-4xl font-bold mb-8">{post.title}</h1>
         
         {post.sections.map((section, index) => (
