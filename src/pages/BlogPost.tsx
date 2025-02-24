@@ -37,9 +37,9 @@ const blogContent = {
 
 const BlogPost = () => {
   const { slug } = useParams();
-  const post = blogContent[slug as keyof typeof blogContent];
+  console.log("Current slug:", slug); // Adding this to debug
 
-  if (!post) {
+  if (!slug || !blogContent[slug]) {
     return <div className="min-h-screen flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-gray-900">Post not found</h1>
@@ -54,6 +54,8 @@ const BlogPost = () => {
       </div>
     </div>;
   }
+
+  const post = blogContent[slug];
 
   return (
     <div className="min-h-screen max-w-3xl mx-auto px-6 py-12">
