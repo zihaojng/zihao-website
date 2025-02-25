@@ -1,4 +1,3 @@
-
 import { useParams, Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { ChevronLeft } from "lucide-react";
@@ -59,16 +58,14 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen max-w-3xl mx-auto px-6 py-12">
-      <div className="w-full mb-8">
-        <Link 
-          to="/" 
-          className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors"
-        >
-          <ChevronLeft className="h-4 w-4 mr-1" />
-          Home
-        </Link>
-      </div>
-      <article className="prose prose-slate lg:prose-lg text-left">
+      <Link 
+        to="/" 
+        className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors mb-6"
+      >
+        <ChevronLeft className="h-4 w-4 mr-1" />
+        Home
+      </Link>
+      <article className="prose prose-slate lg:prose-lg">
         <h1 className="text-4xl font-bold mb-8">{post.title}</h1>
         
         {post.sections.map((section, index) => (
