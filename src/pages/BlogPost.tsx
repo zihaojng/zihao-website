@@ -58,8 +58,8 @@ const BlogPost = () => {
   const post = blogContent[slug];
 
   return (
-    <div className="min-h-screen max-w-3xl mx-auto px-6 py-12">
-      <div className="w-full mb-8">
+    <div className="min-h-screen max-w-3xl px-6 py-12">
+      <div className="mb-8">
         <Link 
           to="/" 
           className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors"
