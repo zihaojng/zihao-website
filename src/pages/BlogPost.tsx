@@ -58,8 +58,8 @@ const BlogPost = () => {
   const post = blogContent[slug];
 
   return (
-    <div className="min-h-screen max-w-3xl mx-auto px-6 py-12">
-      <div className="w-full">
+    <div className="min-h-screen w-full px-4 py-12">
+      <div className="max-w-[750px] mx-auto">
         <Link 
           to="/" 
           className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 transition-colors"
@@ -67,22 +67,22 @@ const BlogPost = () => {
           <ChevronLeft className="h-4 w-4 mr-1" />
           Home
         </Link>
+        <article className="prose prose-slate lg:prose-lg">
+          <h1 className="text-4xl font-bold mb-8 text-left">{post.title}</h1>
+          
+          {post.sections.map((section, index) => (
+            <div key={index} className="mb-12 text-left">
+              {section.heading && <h2 className="text-2xl font-semibold mb-4">{section.heading}</h2>}
+              <div 
+                className="whitespace-pre-wrap" 
+                dangerouslySetInnerHTML={{
+                  __html: section.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                }}
+              />
+            </div>
+          ))}
+        </article>
       </div>
-      <article className="prose prose-slate lg:prose-lg mx-auto text-left">
-        <h1 className="text-4xl font-bold mb-8">{post.title}</h1>
-        
-        {post.sections.map((section, index) => (
-          <div key={index} className="mb-12">
-            {section.heading && <h2 className="text-2xl font-semibold mb-4">{section.heading}</h2>}
-            <div 
-              className="whitespace-pre-wrap" 
-              dangerouslySetInnerHTML={{
-                __html: section.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-              }}
-            />
-          </div>
-        ))}
-      </article>
     </div>
   );
 };
