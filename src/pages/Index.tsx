@@ -58,7 +58,7 @@ const Index = () => {
   return <div className="min-h-screen max-w-4xl mx-auto px-6 py-12 space-y-24">
       <section className="fade-in bg-white rounded-xl shadow-lg p-12">
         <div className="flex flex-col-reverse md:flex-row items-start gap-12">
-          <div className="flex-1 space-y-8">
+          <div className="flex-1 space-y-8 text-left">
             <div className="space-y-6">
               <span className="font-medium" style={{
               color: '#dc7d06'
@@ -90,7 +90,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="space-y-8">
+      <section className="space-y-8 text-left">
         <h2 className="text-2xl font-semibold tracking-tight bg-gradient-to-br from-foreground to-foreground/80 bg-clip-text text-transparent">Writing</h2>
         <div className="grid gap-4">
           {blogPosts.map((post, index) => <Link key={index} to={post.url} className="group transition-colors duration-200">
@@ -101,7 +101,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="space-y-8">
+      <section className="space-y-8 text-left">
         <h2 className="text-2xl font-semibold tracking-tight bg-gradient-to-br from-foreground to-foreground/80 bg-clip-text text-transparent">Contact</h2>
         <Card className="p-6 bg-white/50 backdrop-blur-sm">
           <form className="space-y-6" onSubmit={handleSubmit}>
