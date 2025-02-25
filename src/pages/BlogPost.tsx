@@ -58,17 +58,17 @@ const BlogPost = () => {
   const post = blogContent[slug];
 
   return (
-    <div className="min-h-screen max-w-3xl px-6 py-12">
-      <div className="mb-8">
+    <div className="min-h-screen max-w-3xl mx-auto px-6 py-12">
+      <div className="w-full">
         <Link 
           to="/" 
-          className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors"
+          className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 transition-colors"
         >
           <ChevronLeft className="h-4 w-4 mr-1" />
           Home
         </Link>
       </div>
-      <article className="prose prose-slate lg:prose-lg text-left">
+      <article className="prose prose-slate lg:prose-lg mx-auto text-left">
         <h1 className="text-4xl font-bold mb-8">{post.title}</h1>
         
         {post.sections.map((section, index) => (
