@@ -1,7 +1,8 @@
 
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { ChevronLeft } from "lucide-react";
+import { useEffect } from "react";
 
 const blogContent = {
   "the-emotional-arbitrage-a-framework-for-startup-ideation": {
@@ -37,7 +38,13 @@ const blogContent = {
 
 const BlogPost = () => {
   const { slug } = useParams();
+  const location = useLocation();
   console.log("Current slug:", slug);
+
+  // Add an effect to scroll to top when the page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
 
   if (!slug || !blogContent[slug]) {
     return <div className="min-h-screen flex items-center justify-center">
