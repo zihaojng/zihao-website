@@ -66,7 +66,7 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen w-full px-4 py-12">
-      <div className="max-w-[560px] mx-auto">
+      <div className="max-w-[420px] mx-auto">
         <Link 
           to="/" 
           className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 transition-colors"
