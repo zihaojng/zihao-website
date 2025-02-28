@@ -67,13 +67,15 @@ const BlogPost = () => {
   return (
     <div className="min-h-screen w-full px-4 py-12">
       <div className="max-w-[630px] mx-auto">
-        <Link 
-          to="/" 
-          className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 transition-colors"
-        >
-          <ChevronLeft className="h-4 w-4 mr-1" />
-          Home
-        </Link>
+        <div className="text-left">
+          <Link 
+            to="/" 
+            className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 transition-colors"
+          >
+            <ChevronLeft className="h-4 w-4 mr-1" />
+            Home
+          </Link>
+        </div>
         <article className="prose prose-slate lg:prose-lg">
           <h1 className="text-4xl font-bold mb-8 text-left">{post.title}</h1>
           
