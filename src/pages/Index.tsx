@@ -55,16 +55,19 @@ const Index = () => {
     }
   };
 
-  return <div className="min-h-screen max-w-4xl mx-auto px-6 py-12 space-y-24">
-      <section className="fade-in bg-white rounded-xl shadow-lg p-12">
-        <div className="flex flex-col-reverse md:flex-row items-start gap-12">
-          <div className="flex-1 space-y-8 text-left">
-            <div className="space-y-6">
+  return <div className="min-h-screen w-full mx-auto px-4 sm:px-6 py-12 max-w-5xl">
+      <section className="fade-in bg-white rounded-xl shadow-lg p-6 sm:p-8 md:p-12">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+          <div className="w-full max-w-[250px] md:w-64 h-auto md:h-80 shrink-0 overflow-hidden rounded-lg order-1 md:order-2">
+            <img src="/lovable-uploads/8c9529ac-8499-44e6-9bb0-75c9f1130a9e.png" alt="Zihao Jiang" className="w-full h-full object-cover object-center" />
+          </div>
+          <div className="flex-1 space-y-6 text-left order-2 md:order-1">
+            <div className="space-y-4">
               <span className="font-medium" style={{
               color: '#dc7d06'
             }}>About</span>
-              <h1 className="text-5xl font-bold text-slate-900">Hi, I'm Zihao</h1>
-              <div className="space-y-4 text-lg text-slate-600">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900">Hi, I'm Zihao</h1>
+              <div className="space-y-4 text-base sm:text-lg text-slate-600">
                 <p className="text-gray-950">Currently building AI agents to bring efficiency to lawsuits at <a href="https://legion.law" className="text-blue-600 hover:text-blue-700 underline" target="_blank" rel="noopener noreferrer">
                     legion.law
                   </a>
@@ -72,25 +75,22 @@ const Index = () => {
                 <p className="text-gray-950 font-normal">Previously led product at a crypto company that raised $1B. Also PM for Assassin's Creed <img src="/lovable-uploads/5e5b86f8-e89c-4575-b42b-35b0f215ec0e.png" alt="Assassin's Creed Icon" className="inline-block h-6 w-6 -mt-1" /></p>
                 <p className="text-gray-950 font-normal">BA @ Brown, JD/MBA @ U of Toronto</p>
               </div>
-              <div className="flex gap-4 pt-4">
+              <div className="flex flex-wrap gap-3 pt-4">
                 <a href="https://x.com/zeeitthru" target="_blank" rel="noopener noreferrer" className="social-button">
                   <Twitter size={20} />
-                  <span className="hidden md:inline">Say hi on Twitter</span>
+                  <span className="hidden sm:inline">Say hi on Twitter</span>
                 </a>
                 <a href="https://www.linkedin.com/in/zihaoj/" target="_blank" rel="noopener noreferrer" className="social-button">
                   <Linkedin size={20} />
-                  <span className="hidden md:inline">Connect on LinkedIn</span>
+                  <span className="hidden sm:inline">Connect on LinkedIn</span>
                 </a>
               </div>
             </div>
           </div>
-          <div className="w-64 h-80 shrink-0 overflow-hidden rounded-lg">
-            <img src="/lovable-uploads/8c9529ac-8499-44e6-9bb0-75c9f1130a9e.png" alt="Zihao Jiang" className="w-full h-full object-cover object-center" />
-          </div>
         </div>
       </section>
 
-      <section className="space-y-8 text-left">
+      <section className="space-y-6 text-left mt-16 sm:mt-20">
         <h2 className="text-2xl font-semibold tracking-tight bg-gradient-to-br from-foreground to-foreground/80 bg-clip-text text-transparent">Writing</h2>
         <div className="grid gap-4">
           {blogPosts.map((post, index) => <Link key={index} to={post.url} className="group transition-colors duration-200">
@@ -101,7 +101,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="space-y-8 text-left">
+      <section className="space-y-6 text-left mt-16 sm:mt-20 mb-12">
         <h2 className="text-2xl font-semibold tracking-tight bg-gradient-to-br from-foreground to-foreground/80 bg-clip-text text-transparent">Contact</h2>
         <Card className="p-6 bg-white/50 backdrop-blur-sm">
           <form className="space-y-6" onSubmit={handleSubmit}>
