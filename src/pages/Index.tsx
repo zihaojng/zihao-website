@@ -72,7 +72,7 @@ const Index = () => {
                     legion.law
                   </a>
                 </p>
-                <p className="text-gray-950 font-normal">Previously led product at a crypto company that raised $1B. Also PM for Assassin's Creed <img src="/lovable-uploads/5e5b86f8-e89c-4575-b42b-35b0f215ec0e.png" alt="Assassin's Creed Icon" className="inline-block h-6 w-6 -mt-1" /></p>
+                <p className="text-gray-950 font-normal">Previously led product at a fintech company that raised $1B. Also PM for Assassin's Creed <img src="/lovable-uploads/5e5b86f8-e89c-4575-b42b-35b0f215ec0e.png" alt="Assassin's Creed Icon" className="inline-block h-6 w-6 -mt-1" /></p>
                 <p className="text-gray-950 font-normal">BA @ Brown, JD/MBA @ U of Toronto</p>
               </div>
               <div className="flex flex-wrap gap-3 pt-4">
