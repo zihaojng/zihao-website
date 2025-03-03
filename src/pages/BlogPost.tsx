@@ -1,4 +1,3 @@
-
 import { useParams, Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { ChevronLeft } from "lucide-react";
@@ -18,15 +17,15 @@ const blogContent = {
       },
       {
         heading: "The Framework in Action",
-        content: "Consider Uber's emergence in 2009. The taxi industry had created perfect conditions for disruption:\n<ul class=\"list-disc pl-8 my-4\">\n<li>Intense emotional negativity (unreliable service, perceived price gouging)</li>\n<li>Universal experience (everyone who needed urban transportation)</li>\n<li>Clear status quo villain (the taxi \"cartel\")</li>\n</ul>\n\nUber's genius wasn't just technological - it was recognizing and weaponizing existing emotional intensity. Their early messaging (\"Everyone's private driver\") wasn't about anger; it was about empowerment. But it worked because the anger was already there, waiting to be channeled.\n\nAirbnb followed a similar pattern. The founders' origin story - renting air mattresses during a conference when hotels were price-gouging - resonated because it tapped into widespread frustration with traditional accommodation options. The emotional intensity around hotel prices and limited choices, combined with the massive scale of the travel market, created perfect conditions for their peer-to-peer solution."
+        content: "Consider Uber's emergence in 2009. The taxi industry had created perfect conditions for disruption:\n<ul class=\"list-disc pl-8 my-2\">\n<li>Intense emotional negativity (unreliable service, perceived price gouging)</li>\n<li>Universal experience (everyone who needed urban transportation)</li>\n<li>Clear status quo villain (the taxi \"cartel\")</li>\n</ul>Uber's genius wasn't just technological - it was recognizing and weaponizing existing emotional intensity. Their early messaging (\"Everyone's private driver\") wasn't about anger; it was about empowerment. But it worked because the anger was already there, waiting to be channeled.\n\nAirbnb followed a similar pattern. The founders' origin story - renting air mattresses during a conference when hotels were price-gouging - resonated because it tapped into widespread frustration with traditional accommodation options. The emotional intensity around hotel prices and limited choices, combined with the massive scale of the travel market, created perfect conditions for their peer-to-peer solution."
       },
       {
         heading: "Modern Applications",
-        content: "A fascinating recent example is the emergence of political stock trading apps. These platforms operate at the intersection of two powerful emotions:\n<ol class=\"list-decimal pl-8 my-4\">\n<li>Moral outrage (\"Why do politicians get to trade on insider knowledge?\")</li>\n<li>Financial FOMO (\"How can I get those returns?\")</li>\n</ol>\n\nThe addressable market includes both retail investors and anyone frustrated with political corruption - a potentially massive scale. While the efficient market hypothesis suggests this opportunity may be temporary, the emotional intensity × scale equation predicts strong initial traction."
+        content: "A fascinating recent example is the emergence of political stock trading apps. These platforms operate at the intersection of two powerful emotions:\n<ol class=\"list-decimal pl-8 my-2\">\n<li>Moral outrage (\"Why do politicians get to trade on insider knowledge?\")</li>\n<li>Financial FOMO (\"How can I get those returns?\")</li>\n</ol>The addressable market includes both retail investors and anyone frustrated with political corruption - a potentially massive scale. While the efficient market hypothesis suggests this opportunity may be temporary, the emotional intensity × scale equation predicts strong initial traction."
       },
       {
         heading: "The Strategy",
-        content: "For founders, this suggests a clear pathway for ideation:\n<ol class=\"list-decimal pl-8 my-4\">\n<li>Look for strong emotional signals (Reddit rants, Twitter threads, viral complaints)</li>\n<li>Assess the potential scale (addressable market size, purchase power)</li>\n<li>Design solutions that don't just solve the problem, but validate and channel the underlying emotion</li>\n</ol>\n\nThe most successful startups don't just build better mousetraps - they tap into and scale existing emotional currents. Understanding this dynamic is crucial for founders seeking to create truly transformative companies."
+        content: "For founders, this suggests a clear pathway for ideation:\n<ol class=\"list-decimal pl-8 my-2\">\n<li>Look for strong emotional signals (Reddit rants, Twitter threads, viral complaints)</li>\n<li>Assess the potential scale (addressable market size, purchase power)</li>\n<li>Design solutions that don't just solve the problem, but validate and channel the underlying emotion</li>\n</ol>The most successful startups don't just build better mousetraps - they tap into and scale existing emotional currents. Understanding this dynamic is crucial for founders seeking to create truly transformative companies."
       },
       {
         heading: "How I Applied This to Legion",
@@ -41,7 +40,6 @@ const BlogPost = () => {
   const location = useLocation();
   console.log("Current slug:", slug);
 
-  // Add an effect to scroll to top when the page loads
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
