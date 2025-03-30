@@ -10,12 +10,12 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
-    title: "The Emotional Arbitrage: A Framework for Startup Ideation",
-    url: "/blog/the-emotional-arbitrage-a-framework-for-startup-ideation"
-  },
-  {
     title: "Lawyers, AI, and the Stuff Machines Can't Touch",
     url: "/blog/lawyers-ai-and-the-stuff-machines-cant-touch"
+  },
+  {
+    title: "The Emotional Arbitrage: A Framework for Startup Ideation",
+    url: "/blog/the-emotional-arbitrage-a-framework-for-startup-ideation"
   }
 ];
 
