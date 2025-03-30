@@ -8,10 +8,16 @@ import emailjs from '@emailjs/browser';
 import { useToast } from "@/components/ui/use-toast";
 import { Link } from "react-router-dom";
 
-const blogPosts = [{
-  title: "The Emotional Arbitrage: A Framework for Startup Ideation",
-  url: "/blog/the-emotional-arbitrage-a-framework-for-startup-ideation"
-}];
+const blogPosts = [
+  {
+    title: "The Emotional Arbitrage: A Framework for Startup Ideation",
+    url: "/blog/the-emotional-arbitrage-a-framework-for-startup-ideation"
+  },
+  {
+    title: "Lawyers, AI, and the Stuff Machines Can't Touch",
+    url: "/blog/lawyers-ai-and-the-stuff-machines-cant-touch"
+  }
+];
 
 const Index = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
