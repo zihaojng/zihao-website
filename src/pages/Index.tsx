@@ -74,7 +74,7 @@ const Index = () => {
             }}>About</span>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900">Hi, I'm Zihao</h1>
               <div className="space-y-4 text-base sm:text-lg text-slate-600">
-                <p className="text-gray-950">Currently building AI agents to bring efficiency to lawsuits at <a href="https://legion.law" className="text-blue-600 hover:text-blue-700 underline" target="_blank" rel="noopener noreferrer">
+                <p className="text-gray-950">Building Cursor for litigation at <a href="https://legion.law" className="text-blue-600 hover:text-blue-700 underline" target="_blank" rel="noopener noreferrer">
                     legion.law
                   </a>
                 </p>
@@ -149,3 +149,4 @@ const Index = () => {
 };
 
 export default Index;
+
