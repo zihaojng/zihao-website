@@ -65,7 +65,7 @@ const Index = () => {
       <section className="fade-in bg-white rounded-xl shadow-lg p-6 sm:p-8 md:p-12">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
           <div className="w-full max-w-[250px] md:w-64 h-auto md:h-80 shrink-0 overflow-hidden rounded-lg order-1 md:order-2">
-            <img src="/lovable-uploads/8c9529ac-8499-44e6-9bb0-75c9f1130a9e.png" alt="Zihao Jiang" className="w-full h-full object-cover object-center" />
+            <img src="/pics/8c9529ac-8499-44e6-9bb0-75c9f1130a9e.png" alt="Zihao Jiang" className="w-full h-full object-cover object-center" />
           </div>
           <div className="flex-1 space-y-6 text-left order-2 md:order-1">
             <div className="space-y-4">
@@ -78,7 +78,7 @@ const Index = () => {
                     legion.law
                   </a>
                 </p>
-                <p className="text-gray-950 font-normal">Previously led product at a fintech company that raised $1B. Also PM for Assassin's Creed <img src="/lovable-uploads/5e5b86f8-e89c-4575-b42b-35b0f215ec0e.png" alt="Assassin's Creed Icon" className="inline-block h-6 w-6 -mt-1" /></p>
+                <p className="text-gray-950 font-normal">Previously led product at a fintech company that raised $1B. Also PM for Assassin's Creed <img src="/pics/5e5b86f8-e89c-4575-b42b-35b0f215ec0e.png" alt="Assassin's Creed Icon" className="inline-block h-6 w-6 -mt-1" /></p>
                 <p className="text-gray-950 font-normal">BA @ Brown, JD/MBA @ U of Toronto</p>
               </div>
               <div className="flex flex-wrap gap-3 pt-4">
@@ -149,4 +149,3 @@ const Index = () => {
 };
 
 export default Index;
-
