@@ -3,23 +3,18 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, ExternalLink, Twitter, Linkedin } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import emailjs from '@emailjs/browser';
 import { useToast } from "@/components/ui/use-toast";
 import { Link } from "react-router-dom";
 
-const blogPosts = [
-  {
-    title: "Lawyers, AI, and the Stuff Machines Can't Touch",
-    url: "/blog/lawyers-ai-and-the-stuff-machines-cant-touch"
-  },
-  {
-    title: "The Emotional Arbitrage: A Framework for Startup Ideation",
-    url: "/blog/the-emotional-arbitrage-a-framework-for-startup-ideation"
-  }
-];
+const getPostTitle = (content) => {
+  const match = content.match(/^#\s+(.*)/);
+  return match ? match[1] : "Untitled Post";
+};
 
 const Index = () => {
+  const [blogPosts, setBlogPosts] = useState([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -27,6 +22,25 @@ const Index = () => {
     email: '',
     message: ''
   });
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const postModules = import.meta.glob('../../blog/*.md');
+      const posts = await Promise.all(
+        Object.entries(postModules).map(async ([path, importer]) => {
+          const slug = path.split('/').pop().replace('.md', '');
+          const module: any = await importer();
+          const res = await fetch(module.default);
+          const text = await res.text();
+          const title = getPostTitle(text);
+          return { title, url: `/blog/${slug}` };
+        })
+      );
+      setBlogPosts(posts);
+    };
+
+    fetchPosts();
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
