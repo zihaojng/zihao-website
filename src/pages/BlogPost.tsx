@@ -4,6 +4,7 @@ import { ChevronLeft } from "lucide-react";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -55,7 +56,7 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen w-full px-4 py-12">
-      <div className="max-w-[630px] mx-auto">
+      <div className="max-w-[820px] mx-auto">
         <div className="text-left">
           <Link 
             to="/" 
@@ -65,10 +66,12 @@ const BlogPost = () => {
             Home
           </Link>
         </div>
-        <article className="prose prose-slate lg:prose-lg">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
-        </article>
       </div>
+      <main className="flex justify-center">
+        <article className="prose prose-slate lg:prose-lg max-w-[820px] text-left">
+          <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
+        </article>
+      </main>
     </div>
   );
 };
