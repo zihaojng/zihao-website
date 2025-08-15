@@ -8,8 +8,30 @@ import emailjs from '@emailjs/browser';
 import { useToast } from "@/components/ui/use-toast";
 import { Link } from "react-router-dom";
 
+const parseFrontmatter = (text) => {
+  const frontmatterRegex = /^---\s*([\s\S]*?)\s*---/;
+  const match = frontmatterRegex.exec(text);
+  if (!match) {
+    return { data: {}, content: text };
+  }
+
+  const frontmatter = match[1];
+  const content = text.slice(match[0].length);
+  const data: { [key: string]: string } = {};
+  frontmatter.split('\n').forEach(line => {
+    const parts = line.split(':');
+    if (parts.length > 1) {
+      const key = parts[0].trim();
+      const value = parts.slice(1).join(':').trim().replace(/^['"]|['"]$/g, '');
+      data[key] = value;
+    }
+  });
+
+  return { data, content };
+};
+
 const getPostTitle = (content) => {
-  const match = content.match(/^#\s+(.*)/);
+  const match = content.match(/^#\s+(.*)/m);
   return match ? match[1] : "Untitled Post";
 };
 
@@ -32,10 +54,12 @@ const Index = () => {
           const module: any = await importer();
           const res = await fetch(module.default);
           const text = await res.text();
-          const title = getPostTitle(text);
-          return { title, url: `/blog/${slug}` };
+          const { data, content } = parseFrontmatter(text);
+          const title = data.shortTitle || getPostTitle(content);
+          return { title, url: `/blog/${slug}`, date: data.date };
         })
       );
+      posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
       setBlogPosts(posts);
     };
 
@@ -92,7 +116,7 @@ const Index = () => {
                     legion.law
                   </a>
                 </p>
-                <p className="text-gray-950 font-normal">Previously led product at a fintech company that raised $1B. Also PM for Assassin's Creed <img src="/pics/5e5b86f8-e89c-4575-b42b-35b0f215ec0e.png" alt="Assassin's Creed Icon" className="inline-block h-6 w-6 -mt-1" /></p>
+                <p className="text-gray-950 font-normal">Previously led product at a fintech company that raised $1B and PMed Assassin's Creed <img src="/pics/5e5b86f8-e89c-4575-b42b-35b0f215ec0e.png" alt="Assassin's Creed Icon" className="inline-block h-6 w-6 -mt-1" /></p>
                 <p className="text-gray-950 font-normal">BA @ Brown, JD/MBA @ U of Toronto</p>
               </div>
               <div className="flex flex-wrap gap-3 pt-4">

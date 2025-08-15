@@ -1,3 +1,9 @@
+---
+title: 'Your Vibe is Your Brand Part II: Generate perfectly rendered assets (PDFs, PNGs, and more) from code with a single command line'
+shortTitle: "Your Vibe is Your Brand Part II"
+date: "2025-08-14T12:00:00Z"
+---
+
 # Your Vibe is Your Brand Part II: Generate perfectly rendered assets (PDFs, PNGs, and more) from code with a single command line
 
 In Part 1, I shared the playbook for creating a professional design from a simple "vibe." The result is a beautiful, perfected design that lives as code in a GitHub repo.

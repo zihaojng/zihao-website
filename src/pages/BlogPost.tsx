@@ -6,6 +6,28 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 
+const parseFrontmatter = (text) => {
+  const frontmatterRegex = /^---\s*([\s\S]*?)\s*---/;
+  const match = frontmatterRegex.exec(text);
+  if (!match) {
+    return { data: {}, content: text };
+  }
+
+  const frontmatter = match[1];
+  const content = text.slice(match[0].length);
+  const data: { [key: string]: string } = {};
+  frontmatter.split('\n').forEach(line => {
+    const parts = line.split(':');
+    if (parts.length > 1) {
+      const key = parts[0].trim();
+      const value = parts.slice(1).join(':').trim().replace(/^['"]|['"]$/g, '');
+      data[key] = value;
+    }
+  });
+
+  return { data, content };
+};
+
 const BlogPost = () => {
   const { slug } = useParams();
   const [content, setContent] = useState("");
@@ -19,7 +41,8 @@ const BlogPost = () => {
           fetch(res.default)
             .then(response => response.text())
             .then(text => {
-              setContent(text)
+              const { content } = parseFrontmatter(text);
+              setContent(content);
               setLoading(false);
             })
             .catch(err => {

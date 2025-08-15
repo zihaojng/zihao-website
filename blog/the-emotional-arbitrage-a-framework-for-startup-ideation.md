@@ -1,3 +1,7 @@
+---
+date: "2024-10-07"
+---
+
 # The Emotional Arbitrage: A Framework for Startup Ideation
 
 The conventional wisdom in startup ideation focuses on finding "pain points" - but this framing, while useful, obscures a more fundamental dynamic: successful startups don't just solve problems, they arbitrage emotions at scale.

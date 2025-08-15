@@ -1,3 +1,7 @@
+---
+date: "2025-04-12"
+---
+
 # Lawyers, AI, and the Stuff Machines Can't Touch
 
 AI's crashing into everything these days, and law's no exception. You've got headlines screaming about robots replacing lawyers, but let's cut through the noise—that's not what's happening. It's not a cage match between humans and code; it's more like the job's getting a serious remix. Lawyers aren't going anywhere—they're just figuring out where they shine while AI chews up the boring bits.
