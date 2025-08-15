@@ -18,6 +18,8 @@ The Automated Asset Factory was designed to take your finished code and turn it 
 
 It works by separating the "engine" from the "blueprint."
 
+You can fork it from here 👉 [https://github.com/zihaojng/legion-marketing.git](https://github.com/zihaojng/legion-marketing.git)
+
 ### The Factory's Architecture
 
 Our factory is a simple monorepo with two key parts:
